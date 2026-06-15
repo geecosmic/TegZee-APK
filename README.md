@@ -233,8 +233,8 @@ SUPABASE_ANON_KEY=
 
 | Component | Status | Platform |
 |-----------|--------|----------|
-| Flutter App | In Development | Local testing |
-| Django Backend | In Development | Local + Hugging Face (testing) |
+| Flutter App | Ready | Github |
+| Django Backend | Ready | Hugging Face |
 | Database | Live | Supabase (PostgreSQL) |
 | Storage | Live | Supabase Storage |
 
