@@ -1,0 +1,276 @@
+/* Base Resets and Variables */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #060b13;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Header & Nav */
+header {
+    background: rgba(8, 17, 31, 0.8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    background: linear-gradient(45deg, #fff, #b388ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Section Common Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    color: #8a99ad;
+    font-size: 1.1rem;
+}
+
+/* Hero Container Settings */
+.hero {
+    padding: 160px 20px 80px 20px;
+    background: radial-gradient(circle at top right, rgba(106, 27, 154, 0.2), transparent), #08111f;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+/* Hero Typography (FIXED: Moved out of the comment block) */
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-subtext {
+    font-size: 1.2rem;
+    color: #b0bec5;
+    margin-bottom: 40px;
+}
+
+/* New Layout Behavior For Large Displays */
+@media (min-width: 992px) {
+    .hero-container {
+        grid-template-columns: 1.1fr 0.9fr; 
+    }
+}
+
+/* Centered & Enlarged Hero Image Rules */
+.hero-image-wrapper {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+}
+
+.hero-display-img {
+    width: 100%;
+    max-width: 420px; 
+    height: auto;
+    border-radius: 40px;
+    border: 5px solid #1e293b;
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8);
+    transition: transform 0.4s ease;
+}
+
+.hero-display-img:hover {
+    transform: scale(1.02);
+}
+
+/* Call To Action Buttons */
+.hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+.divider {
+    color: #64748b;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background: #6A1B9A;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(106, 27, 154, 0.4);
+}
+
+.btn-primary:hover {
+    background: #7B1FA2;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border: 2px solid #334155;
+    color: #fff;
+}
+
+.btn-outline:hover {
+    border-color: #6A1B9A;
+    background: rgba(106, 27, 154, 0.1);
+}
+
+.btn-secondary {
+    background: rgba(255,255,255,0.05);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 8px 20px;
+    font-size: 0.9rem;
+}
+
+.btn-secondary:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* App Screenshots Gallery */
+.screens {
+    padding: 80px 20px;
+    background: #0b1524;
+}
+
+.gallery {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: #6A1B9A #08111f;
+}
+
+.gallery img {
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    flex-shrink: 0;
+}
+
+/* Features Grid */
+.features {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #13203a;
+    padding: 40px 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border-color: rgba(106, 27, 154, 0.3);
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+/* Contact & Footer Section */
+.contact {
+    background: #04080f;
+    padding: 80px 20px;
+    text-align: center;
+    border-top: 1px solid #13203a;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 !important;
+}
+
+.contact-link {
+    color: #b388ff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.contact-link:hover {
+    color: #fff;
+}
